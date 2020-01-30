@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Hazards/Hazards.gd" type="Script" id=1]
+[ext_resource path="res://GFX/Environment/spikes_top.png" type="Texture" id=2]
+
+[node name="SpikeTop" type="Area2D"]
+modulate = Color( 0.376471, 0.0235294, 0.0235294, 1 )
+collision_layer = 4
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -33.731, -26.4453, -47.0725, 26.12, 46.8514, 26.3869, 33.2431, -26.7122 )
+[connection signal="body_entered" from="." to="." method="_on_SpikeTop_body_entered"]

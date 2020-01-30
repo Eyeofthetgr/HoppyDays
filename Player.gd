@@ -3,9 +3,12 @@ extends KinematicBody2D
 var motion = Vector2(0,0)
 
 const SPEED = 1500
-const GRAVITY = 300
+const GRAVITY = 150
 const UP = Vector2(0,-1)
-const JUMP_SPEED = 5000
+const JUMP_SPEED = 3500
+const WORLD_LIMIT = 4000
+
+signal animate
 
 func _physics_process(delta):
 	apply_gravity()
@@ -16,8 +19,12 @@ func _physics_process(delta):
 
 
 func apply_gravity():
+	if position.y > WORLD_LIMIT:
+		end_game()
 	if is_on_floor():
 		motion.y = 0
+	elif is_on_ceiling():
+		motion.y = 1
 	else:
 		motion.y += GRAVITY
 
@@ -37,15 +44,10 @@ func move():
 
 
 func animate():
-	if motion.y < 0:
-		$AnimatedSprite.play("jump")
-	elif motion.x > 0:
-		$AnimatedSprite.play("walk")
-		$AnimatedSprite.flip_h = false
-	elif motion.x < 0:
-		$AnimatedSprite.play("walk")
-		$AnimatedSprite.flip_h = true
-	else:
-		$AnimatedSprite.play("idle")
+	emit_signal("animate", motion)
+
+
+func end_game():
+	get_tree().change_scene("res://Levels/GameOver.tscn")
 
 

@@ -1,68 +1,22 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 320, 320 )
+[ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=3]
 
 [node name="Level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 522.414, 146.355 )
+position = Vector2( 438.319, 133.741 )
+collision_mask = 6
 
-[node name="Floor" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 955.645, 954.748 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, -1 )
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -1113789, 5, 0, -1048407, 7, 0, -917203, 5, 0, -786272, 7, 0, -786248, 7, 0, -720564, 5, 0, -655048, 5, 0, -524273, 6, 0, -458692, 4, 0, -458641, 5, 0, -458552, 6, 0, -393180, 1, 0, -393043, 7, 0, -392926, 4, 0, -327675, 5, 0, -327604, 5, 0, -327533, 6, 0, -196484, 6, 0, -130973, 5, 0, -65508, 1, 0, 54, 1, 0, 65673, 5, 0, 131115, 1, 0, 131262, 6, 0, 196616, 0, 0, 262208, 2, 0, 262423, 2, 0, 262446, 1, 0, 327698, 0, 0, 327766, 0, 0, 393331, 1, 0, 393427, 2, 0, 524288, 0, 0, 524601, 1, 0, 590066, 3, 0, 590089, 3, 0, 655410, 3, 0, 655485, 1, 0, 720971, 1, 0, 786532, 1, 0, 786568, 1, 0, 851973, 0, 0, 852290, 0, 0, 917778, 2, 0, 983103, 3, 0, 983267, 2, 0, 1048589, 2, 0, 1048602, 3, 0, 1048614, 3, 0, 1048829, 3, 0, 1048875, 3, 0, 1114197, 3, 0, 1179765, 3, 0, 1310774, 5, 0, 1376326, 2, 0, 1441794, 4, 0, 1441812, 4, 0, 1441891, 2, 0, 1507370, 4, 0, 1638524, 2, 0 )
 
-[node name="Sprite" type="Sprite" parent="Floor"]
-position = Vector2( -443.169, -239.747 )
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
+[node name="Hazards" type="Node" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-visible = false
-position = Vector2( -443.453, -240.62 )
-shape = SubResource( 1 )
-
-[node name="Floor2" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 1594.88, 1085.57 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2"]
-position = Vector2( -443.169, -239.747 )
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
-visible = false
-position = Vector2( -443.453, -240.62 )
-shape = SubResource( 1 )
-
-[node name="Floor3" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 316.407, 853.659 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor3"]
-position = Vector2( -443.169, -239.747 )
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
-visible = false
-position = Vector2( -443.453, -240.62 )
-shape = SubResource( 1 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 514.364, 300.293 )
-current = true
-zoom = Vector2( 2, 2 )
+[node name="SpikeTop" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 1150.19, 993.552 )
