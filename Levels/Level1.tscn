@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=6]
 [ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=7]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=9]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -252,3 +253,26 @@ volume_db = -15.0
 autoplay = true
 
 [node name="GUI" parent="." instance=ExtResource( 8 )]
+
+[node name="NPCs" type="Node" parent="."]
+
+[node name="Spikeman" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 1472.42, 1326.74 )
+
+[node name="Spikeman2" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 4055.24, -525.917 )
+
+[node name="Spikeman3" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 4671.08, 1267.55 )
+
+[node name="Spikeman4" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 8120.19, 1522.15 )
+
+[node name="Spikeman5" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 14715.1, 881.007 )
+
+[node name="Spikeman6" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 18750, -459.909 )
+
+[node name="Spikeman7" parent="NPCs" instance=ExtResource( 9 )]
+position = Vector2( 20806.4, 754.641 )
