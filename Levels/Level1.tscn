@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=5]
-[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=6]
-[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=6]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=7]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=8]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -57,26 +58,197 @@ position = Vector2( 17848, 870.3 )
 [node name="SpikeTop11" parent="Hazards" instance=ExtResource( 4 )]
 position = Vector2( 20168.6, 484.568 )
 
-[node name="JumpPads" type="Node" parent="."]
+[node name="Coins" type="Node" parent="."]
 
-[node name="JumpPad" parent="JumpPads" instance=ExtResource( 5 )]
+[node name="Coin" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1244.88, 250.34 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1376.16, 156.935 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1873.1, -236.482 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1748.87, -355.543 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1889.71, -481.558 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2579.08, 941.673 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2475.31, 867.547 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2779.23, 37.3286 )
+
+[node name="Coin9" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2890.42, -44.2107 )
+
+[node name="Coin10" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 2749.58, -103.512 )
+
+[node name="Coin11" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 4082.15, 818.337 )
+
+[node name="Coin12" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 3871.31, 700.399 )
+
+[node name="Coin13" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 3754.27, -594.866 )
+
+[node name="Coin14" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 3598.21, -337.374 )
+
+[node name="Coin15" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 3527.99, -56.4727 )
+
+[node name="Coin16" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1007.68, 918.878 )
+
+[node name="Coin17" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1233.96, 778.427 )
+
+[node name="Coin18" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1405.63, 1020.31 )
+
+[node name="Coin19" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 1514.86, 1301.21 )
+
+[node name="Coin20" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 3582.61, 1215.38 )
+
+[node name="Coin21" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 5587.93, 981.3 )
+
+[node name="Coin22" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 5486.49, 848.652 )
+
+[node name="Coin23" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 5743.99, 224.428 )
+
+[node name="Coin24" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 5907.84, -33.0645 )
+
+[node name="Coin25" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 6469.65, -189.12 )
+
+[node name="Coin26" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 6656.91, 1324.62 )
+
+[node name="Coin27" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 6493.05, 1191.98 )
+
+[node name="Coin28" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 4456.52, -33.0641 )
+
+[node name="Coin29" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 4300.47, -165.712 )
+
+[node name="Coin30" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 7585.45, 115.189 )
+
+[node name="Coin31" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 7460.6, -1.85266 )
+
+[node name="Coin32" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 8849.5, 661.385 )
+
+[node name="Coin33" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 8248.68, -321.768 )
+
+[node name="Coin34" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 10402.3, -867.964 )
+
+[node name="Coin35" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 10261.8, -961.598 )
+
+[node name="Coin36" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 7460.6, 193.217 )
+
+[node name="Coin37" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 12501.2, -103.29 )
+
+[node name="Coin38" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 12337.4, -259.346 )
+
+[node name="Coin39" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 12540.2, -368.585 )
+
+[node name="Coin40" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 12376.4, -501.233 )
+
+[node name="Coin41" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 13648.2, 263.442 )
+
+[node name="Coin42" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 13523.4, 169.808 )
+
+[node name="Coin43" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 16394.8, 833.046 )
+
+[node name="Coin44" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 16270, 731.61 )
+
+[node name="Coin45" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 17104.9, 474.118 )
+
+[node name="Coin46" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 18127, 122.991 )
+
+[node name="Coin47" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 18251.9, -103.29 )
+
+[node name="Coin48" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 19305.3, 879.863 )
+
+[node name="Coin49" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 19157, 770.624 )
+
+[node name="Coin50" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 20920.4, 684.793 )
+
+[node name="Coin51" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 20795.6, 575.554 )
+
+[node name="Coin53" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 21412, -805.542 )
+
+[node name="Coin54" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 21240.3, -1117.65 )
+
+[node name="Coin55" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 20826.8, -1172.27 )
+
+[node name="Coin56" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 21014.1, -1375.15 )
+
+[node name="Coin52" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 20897, 450.709 )
+
+[node name="JumpPads" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="JumpPad" parent="JumpPads" instance=ExtResource( 6 )]
 position = Vector2( 1859.88, -92.4513 )
 
-[node name="JumpPad2" parent="JumpPads" instance=ExtResource( 5 )]
+[node name="JumpPad2" parent="JumpPads" instance=ExtResource( 6 )]
 position = Vector2( 4400.19, 224.796 )
 
-[node name="JumpPad3" parent="JumpPads" instance=ExtResource( 5 )]
+[node name="JumpPad3" parent="JumpPads" instance=ExtResource( 6 )]
 position = Vector2( 7500.92, 353.778 )
 
-[node name="JumpPad4" parent="JumpPads" instance=ExtResource( 5 )]
+[node name="JumpPad4" parent="JumpPads" instance=ExtResource( 6 )]
 position = Vector2( 12436.1, 99.7596 )
 
-[node name="JumpPad5" parent="JumpPads" instance=ExtResource( 5 )]
+[node name="JumpPad5" parent="JumpPads" instance=ExtResource( 6 )]
 position = Vector2( 16336.4, 992.219 )
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 7 )
 volume_db = -15.0
 autoplay = true
 
-[node name="GUI" parent="." instance=ExtResource( 7 )]
+[node name="GUI" parent="." instance=ExtResource( 8 )]
