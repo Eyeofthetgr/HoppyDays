@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=9]
 [ext_resource path="res://NPCs/Cloud.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=11]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -280,3 +281,24 @@ position = Vector2( 20806.4, 754.641 )
 
 [node name="Cloud" parent="NPCs" instance=ExtResource( 10 )]
 position = Vector2( 1912.47, 578.188 )
+
+[node name="Cloud2" parent="NPCs" instance=ExtResource( 10 )]
+position = Vector2( 3372.77, -311.333 )
+
+[node name="Cloud3" parent="NPCs" instance=ExtResource( 10 )]
+position = Vector2( 6115.46, 88.9511 )
+
+[node name="Cloud4" parent="NPCs" instance=ExtResource( 10 )]
+position = Vector2( 8917.45, -837.634 )
+
+[node name="Cloud5" parent="NPCs" instance=ExtResource( 10 )]
+position = Vector2( 14306.5, -259.445 )
+
+[node name="Cloud6" parent="NPCs" instance=ExtResource( 10 )]
+position = Vector2( 20888.9, -318.746 )
+
+[node name="Cloud7" parent="NPCs" instance=ExtResource( 10 )]
+position = Vector2( 17286.4, 51.8876 )
+
+[node name="Portal" parent="." instance=ExtResource( 11 )]
+position = Vector2( 21741.4, -941.41 )
