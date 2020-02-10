@@ -39,4 +39,4 @@ func end_game():
 
 
 func win_game():
-	get_tree().change_scene("res://Levels/Level2/GotoLevel2.tscn")
+	get_tree().change_scene("res://Levels/Victory.tscn")

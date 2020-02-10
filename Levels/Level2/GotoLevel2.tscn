@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Levels/GameOver.gd" type="Script" id=1]
+[ext_resource path="res://Levels/Level2/GotoLevel2.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Background/bg_layer1.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/candles_.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://GFX/HUD/lifes.png" type="Texture" id=4]
@@ -30,35 +30,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 223.0
+margin_left = 254.0
 margin_top = 175.0
-margin_right = 801.0
+margin_right = 770.0
 margin_bottom = 425.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 578.0
+margin_right = 516.0
 margin_bottom = 164.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "You win!"
+text = "Great!"
+align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 168.0
-margin_right = 578.0
+margin_right = 516.0
 margin_bottom = 250.0
 alignment = 1
 
-[node name="RestartButton" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 78.0
-margin_right = 130.0
+[node name="NextLevelButton" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 52.0
 margin_bottom = 82.0
 texture_normal = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 134.0
-margin_right = 499.0
+margin_left = 56.0
+margin_right = 516.0
 margin_bottom = 82.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Play again!"
-[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+text = "Go to Level2!"
+align = 1
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
